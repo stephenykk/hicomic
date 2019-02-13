@@ -1,0 +1,21 @@
+{
+  "pages": [
+    "pages/tools/enroll/enroll",
+    "pages/demo/demo",
+    "pages/index/index",
+    "pages/views/views",
+    "pages/logs/logs",
+    "pages/hello"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "white",
+    "navigationBarTitleText": "comic22",
+    "navigationBarTextStyle": "black"
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  },
+  "debug": true
+}

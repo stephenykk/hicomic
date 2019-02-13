@@ -1,0 +1,26 @@
+/* pages/views/views.wxss */
+.bc_green{
+  background: #2a2;
+  flex: auto;
+}
+.bc_blue{
+  background: #22a;
+  flex: auto;
+}
+.bc_red{
+  background: #a22;
+  flex: auto;
+}
+.flex-wrp {
+  display: flex;
+  height: 200rpx;
+  
+}
+.hover{
+  background: pink;
+}
+
+.phover{
+  padding: 20px;
+  background: skyblue;
+}

@@ -1,0 +1,9 @@
+/* demo.wxss */
+navigator {
+  border: 1px solid blueviolet;
+  margin-bottom: 5px;
+  border-radius: 3px;
+  background: greenyellow;
+  text-align: center;
+  color: hotpink;
+}
