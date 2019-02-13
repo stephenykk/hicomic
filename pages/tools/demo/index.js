@@ -1,4 +1,4 @@
-// pages/hello.js
+// pages/indexxx/index.js
 Page({
 
   /**
@@ -12,21 +12,21 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    console.log('hello onLoad called..........................');
+    console.log('index onLoad ------------------>')
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
-  onReady: function () {
-    console.log('hello onReady called..........................');
+  onReady () {
+    console.log('index onReady ------------------>')
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    console.log('hello onShow called..........................');
+    console.log('index onShow ------------------>')
   },
 
   /**
