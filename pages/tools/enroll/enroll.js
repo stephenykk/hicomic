@@ -3,8 +3,8 @@ Page({
     names: ''
   },
   onLoad: function () {
-    console.log('-------------------------onload...')
+    console.warn('enroll page load------------------------->>>>')
   }
 })
 
-console.log('after call page()')
+console.log('after call page() ----->')
