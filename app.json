@@ -2,7 +2,6 @@
   "pages": [
     "pages/tools/enroll/enroll",
     "pages/demo/demo",
-    "pages/index/index",
     "pages/views/views",
     "pages/logs/logs"
   ],
