@@ -3,7 +3,7 @@
         <view class="ctrl-line h100p">
             <label for="names" class="label-top pt10">接龙数据:</label>
             <view class="ctrl ctrl-ta">
-                <textarea class="names-ta" id="names" rows="20" placeholder="请粘贴" value="{{names}}"></textarea>
+                <textarea class="names-ta" id="names" placeholder="请粘贴" value="{{names}}" maxlength="-1" bindinput="updateNames"></textarea>
                 <view class="actions">
                     <button type="primary" bindtap="paste">1.粘贴</button>
                     <button type="primary" bindtap="copy">3.复制</button>
@@ -15,7 +15,7 @@
         <view class="ctrl-line">
             <label for="myname">我要报名:</label>
             <view class="ctrl input-line">
-                <input class="name-input" type="text" id="myname" placeholder="你的名字" />
+                <input class="name-input" type="text" id="myname" value="{{newname}}" bindinput="updateNewname" placeholder="你的名字" />
                 <button type="primary" bindtap="submit">2.报名</button>
             </view>
         </view>
