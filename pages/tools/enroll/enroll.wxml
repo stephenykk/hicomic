@@ -1,6 +1,6 @@
 <view class="enroll-container">
-    <view class="section-data">
-        <view class="ctrl-line h100p">
+    <view class="section-data pos-r">
+        <view class="ctrl-line full-size">
             <label for="names" class="label-top pt10">接龙数据:</label>
             <view class="ctrl ctrl-ta">
                 <textarea class="names-ta" id="names" placeholder="请粘贴" value="{{names}}" maxlength="-1" bindinput="updateNames"></textarea>
