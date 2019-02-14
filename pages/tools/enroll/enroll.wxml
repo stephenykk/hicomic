@@ -15,7 +15,7 @@
         <view class="ctrl-line">
             <label for="myname">我要报名:</label>
             <view class="ctrl input-line">
-                <input class="name-input" type="text" id="myname" value="{{newname}}" bindinput="updateNewname" placeholder="你的名字" />
+                <input class="name-input" type="text" id="myname" value="{{newname}}" bindinput="updateNewname" placeholder="你的名字" cursor-spacing="15px" />
                 <button type="primary" bindtap="submit">2.报名</button>
             </view>
         </view>

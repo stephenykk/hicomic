@@ -3,7 +3,7 @@ import sice from '../../../utils/sice';
 Page({
   data: {
     names: '',
-    sn: 1,
+    sn: 0,
     newname: ''
   },
   handleRawNames(data) {
