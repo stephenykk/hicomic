@@ -1,5 +1,5 @@
 <view class="enroll-container">
-    <view class="intro">解决IPhone用户在微信群接龙报名时，不能输回车, 只能一直按空格换行的问题</view>
+    <view class="intro">IPhone用户在微信群接龙报名时，会遇到不能回车, 只能一直按空格换行的苦恼，可以试试在这里编辑.</view>
     <view class="section-data pos-r">
         <view class="ctrl-line full-size">
             <label for="names" class="label-top pt10">接龙数据:</label>

@@ -8,9 +8,10 @@
 
 .intro {
     /*font-size: 30rpx;*/
-    padding: 20rpx 30rpx;
+    padding: 10rpx 30rpx;
     color: #aaa;
     background: #ffe;
+    line-height: 1.5;
     margin-bottom: 20rpx;
 }
 
