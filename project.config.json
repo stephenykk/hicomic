@@ -35,13 +35,13 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": -1,
+			"current": 0,
 			"list": [
 				{
-					"id": -1,
+					"id": 0,
 					"name": "demo",
 					"pathName": "pages/demo/demo",
-					"query": "",
+					"query": "foo=foolish",
 					"scene": "1007"
 				},
 				{
