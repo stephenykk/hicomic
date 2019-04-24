@@ -1,4 +1,6 @@
 
+let navMethods = sice.pick(sice, ['goPaper', 'goEnroll', 'goLogs']);
+
 Page({
 
   /**
@@ -23,5 +25,7 @@ Page({
    */
   onShow: function () {
     sice.log('index onShow');
-  }
+  },
+
+  ...navMethods
 })

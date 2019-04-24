@@ -5,7 +5,7 @@
     "pages/paper/paper",
     "pages/views/views",
     "pages/demo/demo",
-    "pages/tools/enroll/enroll",
+    "pages/tools/enroll/enroll"
   ],
   "window": {
     "backgroundTextStyle": "light",

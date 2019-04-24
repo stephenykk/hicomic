@@ -36,6 +36,23 @@ function d2(n) {
   return n * 1 >= 10 ? n : '0' + n
 }
 
+function pick(obj, keys) {
+  let picked = {}
+  eachKey(obj, function (val, key) {
+    if (keys.includes(key)) {
+      picked[key] = val;
+    }
+  })
+  return picked;
+
+}
+
+function eachKey(obj, fn) {
+  Object.keys(obj).forEach(function (key) {
+    fn(obj[key], key, obj);
+  })
+}
+
 
 function log() {
   var args = [].slice.call(arguments);
@@ -49,6 +66,8 @@ export default {
   flatten,
   log,
   d2,
+  pick,
+  eachKey,
 
   formatTime,
   formatNumber

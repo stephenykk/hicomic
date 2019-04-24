@@ -1,8 +1,11 @@
 export default {
     goPaper() {
-        wx.navigateTo({url: '/pages/paper/paper'});
+        sice.navigateTo('/pages/paper/paper');
     },
     goEnroll() {
-        wx.navigateTo({})
-    }
+        wx.navigateTo('/pages/tools/enroll/enroll')
+    },
+    goLogs() {
+        sice.navigateTo('/pages/logs/logs');
+    },
 }
