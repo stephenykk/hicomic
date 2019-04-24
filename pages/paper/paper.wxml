@@ -1,0 +1,7 @@
+<view class="home-page">
+  <view class="menu">
+    <view class="menu-item">试题练习</view>
+    <view class="menu-item">接龙</view>
+    <view class="menu-item">日志</view>
+  </view>
+</view>

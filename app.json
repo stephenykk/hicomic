@@ -1,9 +1,11 @@
 {
   "pages": [
-    "pages/tools/enroll/enroll",
-    "pages/demo/demo",
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/paper/paper",
     "pages/views/views",
-    "pages/logs/logs"
+    "pages/demo/demo",
+    "pages/tools/enroll/enroll",
   ],
   "window": {
     "backgroundTextStyle": "light",

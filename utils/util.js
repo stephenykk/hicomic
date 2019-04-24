@@ -16,6 +16,40 @@ function formatNumber(n) {
   return n[1] ? n : '0' + n
 }
 
-module.exports = {
-  formatTime: formatTime
+function isArray(arr) {
+  return Object.prototype.toString.call(arr) === '[object Array]'
+}
+
+function isObject(obj) {
+  return Object.prototype.toString.call(obj) === '[object Object]'
+}
+
+function flatten(arr) {
+  let newArr = []
+  arr.forEach(el => {
+    newArr.push.apply(newArr, isArray(el) ? flatten(el) : [el]);
+  })
+  return newArr;
+}
+
+function d2(n) {
+  return n * 1 >= 10 ? n : '0' + n
+}
+
+
+function log() {
+  var args = [].slice.call(arguments);
+  args.unshift('[MYLOG]: ');
+  console.log.apply(console, args);
+}
+
+export default {
+  isArray,
+  isObject,
+  flatten,
+  log,
+  d2,
+
+  formatTime,
+  formatNumber
 }
