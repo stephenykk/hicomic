@@ -1,14 +1,4 @@
-import sice from '../../../utils/sice';
 
-function dateFormat(dt, isTime, retArr) {
-  ; (dt == null || dt == 'now') && (dt = new Date())
-  dt = dt instanceof Date ? dt : new Date(dt)
-  let d2 = val => (val * 1 >= 10 ? val : '0' + val)
-  let dparts = [dt.getFullYear(), dt.getMonth() + 1, dt.getDate()].map(d2)
-  let tparts = [dt.getHours(), dt.getMinutes(), dt.getSeconds()].map(d2)
-
-  return retArr ? [...dparts, ...tparts] : dparts.join('-') + (isTime ? ' ' + tparts.join(':') : '')
-}
 
 Page({
   data: {
@@ -17,7 +7,6 @@ Page({
     newname: '',
     dt: 'haha'
   },
-  dateFormat,
   handleRawNames(data) {
     let snLineRe = /^\d/;
     let lines = data.split(/\n/).filter(line => !!line.replace(/\s/g, ''));
@@ -101,7 +90,7 @@ Page({
     console.warn('enroll page load ---------->');
     console.vm = this;
     let {names} = this.data;
-    this.setData({dt: this.dateFormat(Date.now())})
+    this.setData({dt: sice.dateFormat(Date.now())})
     if(names) {
         this.setData({names: this.handleRawNames(names)});
     }
