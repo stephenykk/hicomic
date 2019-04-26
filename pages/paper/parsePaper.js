@@ -48,6 +48,7 @@ function parseQuestions() {
 	var questions = require('./data.js');
 	questions.forEach(question => {
 		question.options = parseOptions(question);
+		question.type = question.options.length ? 'select' : 'judge';
 	})
 
 	output(questions);
@@ -57,16 +58,11 @@ function parseOptions(question) {
 	if(Array.isArray(question.options)) {
 		return question.options;
 	}
-	if(question.options == null) {
-		console.log('NO OPTIONS, 应该是判断题');
-		console.log('question: ', question);
-		return question.options;
-	}
 
-	if(!(typeof question.options === 'string')) {
+
+	if(typeof question.options !== 'string') {
 		console.log('BAD OPTIONS');
 		console.log('question: ', question);
-		debugger;
 		throw new Error('stop and check it..')
 	}
 
@@ -78,8 +74,10 @@ function parseOptions(question) {
 
 	if(options.length === 1) {
 		options = options[0].match(/[A-G]\s*?\.(.(?![A-G]\s*?\.))*./g)
-		options.map(opt => opt.trim());
+		options = options.map(opt => opt.trim());
 	}
+
+	options = options.map(opt => opt.trim());
 
 	console.log('[INFO] parse options: ', question.options , '-->', options);
 
