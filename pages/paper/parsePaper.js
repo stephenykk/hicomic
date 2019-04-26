@@ -21,7 +21,7 @@ function getQuestions() {
 	})
 
 	var questions = [];
-	var titleRe = /^(\d+\s*\.[\s\S]*?)$/mg;
+	var titleRe = /^(\d+\s*\.[\s\S]*?)$/;
 	var lastTitleIdx = null;
 	lines.forEach((line, i) => {
 		var last = i === lines.length - 1;
@@ -55,17 +55,18 @@ function parseQuestions() {
 
 function parseOptions(question) {
 	if(Array.isArray(question.options)) {
-		return;
+		return question.options;
 	}
 	if(question.options == null) {
 		console.log('NO OPTIONS, 应该是判断题');
 		console.log('question: ', question);
-		return;
+		return question.options;
 	}
 
-	if(!(question.options && question.options.split)) {
+	if(!(typeof question.options === 'string')) {
 		console.log('BAD OPTIONS');
 		console.log('question: ', question);
+		debugger;
 		throw new Error('stop and check it..')
 	}
 
@@ -92,7 +93,7 @@ function parseTitle(question) {
 }
 
 function main() {
-	// getQuestions();
+	getQuestions();
 	parseQuestions();
 }
 
