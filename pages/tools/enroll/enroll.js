@@ -8,9 +8,9 @@ Page({
     dt: 'haha'
   },
   handleRawNames(data) {
-    let snLineRe = /^\d/;
-    let lines = data.split(/\n/).filter(line => !!line.replace(/\s/g, ''));
-    let title = lines[0].trim().match(snLineRe) ? '' : lines.shift().trim();
+    let snLineRe = /^\d/; // 数字开头
+    let lines = data.split(/\n/).filter(line => !!line.replace(/\s/g, '')); //非空行
+    let title = lines[0].trim().match(snLineRe) ? '' : lines.shift().trim(); //标题
     let names = lines;
     
     // >=五个空格+序号姓名 则空格转换为换行
