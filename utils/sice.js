@@ -6,7 +6,14 @@ import date from './date';
 
 
 export default {
-	...date,
+    get curpage() {
+        let pages = getCurrentPages();
+        return pages[pages.length - 1]
+    },
+    set curpage(v) {
+        console.log(v);
+    },
+    ...date,
     ...wxExtend,
     ...nav,
     ...util

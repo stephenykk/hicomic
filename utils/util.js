@@ -22,6 +22,10 @@ function flatten(arr) {
 }
 
 
+function clone(obj) {
+  return JSON.parse(JSON.stringify(obj));
+}
+
 
 function d2(n) {
   return n * 1 >= 10 ? n : '0' + n
@@ -59,6 +63,7 @@ export default {
   d2,
   pick,
   eachKey,
+  clone,
 
   formatNumber
 }

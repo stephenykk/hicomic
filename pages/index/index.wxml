@@ -1,7 +1,7 @@
 <view class="home-page">
   <view class="menu">
-    <button type="primary" bind:tap="goPaper">试题练习</button>
-    <button type="primary" bind:tap="goEnroll">接龙</button>
-    <button type="primary" bind:tap="goLogs">日志</button>
+    <button type="primary" bind:tap="goPaper">盛金源2018反假货币考试题库练习</button>
+    <!-- <button type="primary" bind:tap="goEnroll">接龙</button>
+    <button type="primary" bind:tap="goLogs">日志</button> -->
   </view>
 </view>

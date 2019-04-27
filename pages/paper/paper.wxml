@@ -1,7 +1,53 @@
-<view class="home-page">
-  <view class="menu">
-    <view class="menu-item">试题练习</view>
-    <view class="menu-item">接龙</view>
-    <view class="menu-item">日志</view>
-  </view>
+<view class="pape-page">
+    <!-- 题型 -->
+    <view class="question-type">
+        <text wx:if="{{activeIndex >= judgeIndex}}">判断题</text>
+        <text wx:elif="{{activeIndex >= multiIndex}}">多选题</text>
+        <text wx:else>单选题</text>
+    </view>
+    <!-- 当前题目 -->
+    <view class="question {{question.isShowAnswer ? 'show-answer' : ''}}">
+        <!-- 标题 -->
+        <view class="title"><text class="title-sn">{{activeIndex+1}}. </text>{{question.title}}</view>
+        <!-- 选项 -->
+        <view wx:if="{{question.type === 'select'}}" class="options">
+            <!-- 单选 -->
+            <radio-group wx:if="{{question.single}}" bindchange="onSingleChoose">
+                <label wx:for="{{question.options}}" wx:for-item="option" wx:for-index="i" wx:key="text" class="option {{option.right ? 'right' : ''}} {{option.isChoose && !option.right ? 'error' : ''}}">
+                    <radio value="{{option.value}}" checked="{{option.isChoose}}"></radio>
+                    {{option.text}}
+                </label>
+            </radio-group>
+            <!-- 多选 -->
+            <checkbox-group wx:else bindchange="onMultiChoose">
+                <label wx:for="{{question.options}}" wx:for-item="option" wx:for-index="idx" wx:key="idx" class="option  {{option.right ? 'right' : ''}} {{option.isChoose && !option.right ? 'error' : ''}}">
+                    <checkbox value="{{option.value}}" checked="{{option.isChoose}}"></checkbox>
+                    {{option.text}}
+                </label>
+            </checkbox-group>
+        </view>
+        <!-- 判断 -->
+        <view wx:if="{{question.type === 'judge'}}" class="options judge-options">
+            <radio-group bindchange="onJudgeChoose">
+                <label class="option  {{option.right ? 'right' : ''}} {{option.isChoose && !option.right ? 'error' : ''}}" wx:for="{{question.options}}" wx:for-item="option" wx:key="id">
+                    <radio value="{{option.value}}" checked="{{option.isChoose}}"></radio>
+                    {{option.text}}
+                </label>
+            </radio-group>
+        </view>
+    </view>
+
+    <!-- 题目导航 -->
+    <view class="question-nav">
+    	<view class="question-nav-left">
+	    	<text class="jump-label"> 跳到： </text>
+	    	<input type="number" class="sn-input" maxlength="4" name="sn" value="{{activeIndex+1}}" bindinput="onInputSn" />
+	    	<text class="total"> / {{total}}</text>
+	    	<button bindtap="onJump" type="default" size="mini">GO</button>
+    	</view>
+    	<view class="question-nav-right">
+	    	<button bindtap="goPrev" type="primary" size="mini">上一题</button>
+	    	<button bindtap="goNext" type="primary" size="mini">下一题</button>
+    	</view>
+    </view>
 </view>

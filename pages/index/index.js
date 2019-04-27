@@ -1,4 +1,5 @@
 
+import sice from '../../utils/sice';
 let navMethods = sice.pick(sice, ['goPaper', 'goEnroll', 'goLogs']);
 
 Page({

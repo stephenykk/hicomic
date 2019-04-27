@@ -15,5 +15,4 @@ export default {
 
         wx.showToast(option);
     }
-
 }
