@@ -1,3 +1,4 @@
 .menu {
     text-align: center;
+    margin-top: 200rpx;
 }

@@ -66,6 +66,10 @@
     margin-left: 10rpx;
 }
 
+.question-nav-right button:first-child {
+    margin-right: 40rpx;
+}
+
 
 .sn-input {
     display: inline-block;

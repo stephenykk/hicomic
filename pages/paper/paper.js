@@ -119,7 +119,7 @@ Page({
     },
 
     resetQuestions() {
-        questions = backupQuestions;
+        questions = sice.clone(backupQuestions);
         // let q1 = questions.slice(0, 5);
         // let q2 = questions.filter(q => q.type == 'select' && !q.single).slice(0, 5);
         // let q3 = questions.filter(q => q.type == 'judge').slice(0, 5);
@@ -139,7 +139,7 @@ Page({
             })
         })
 
-        questions = questions.sort((a, b) => {
+        /*questions = questions.sort((a, b) => {
             if (a.type === 'select') {
                 a = a.single ? 1 : 2
             } else {
@@ -152,7 +152,7 @@ Page({
                 b = 3;
             }
             return a - b;
-        })
+        })*/
 
         var singleIndex = questions.findIndex(q => q.type === 'select' && q.single)
         var multiIndex = questions.findIndex(q => q.type === 'select' && !q.single);

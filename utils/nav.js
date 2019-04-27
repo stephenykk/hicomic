@@ -1,11 +1,13 @@
+import wxExtend from './wx-extend';
+
 export default {
     goPaper() {
-        sice.navigateTo('/pages/paper/paper');
+        wxExtend.navigateTo('/pages/paper/paper');
     },
     goEnroll() {
-        sice.navigateTo('/pages/tools/enroll/enroll')
+        wxExtend.navigateTo('/pages/tools/enroll/enroll')
     },
     goLogs() {
-        sice.navigateTo('/pages/logs/logs');
+        wxExtend.navigateTo('/pages/logs/logs');
     },
 }
