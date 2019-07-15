@@ -1,0 +1,9 @@
+.menu {
+    text-align: center;
+    margin-top: 200rpx;
+}
+
+
+.enroll-btn {
+	margin-top: 100rpx;
+}
