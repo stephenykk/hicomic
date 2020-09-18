@@ -1,21 +1,28 @@
 {
-  "pages": [
-    "pages/index/index",
-    "pages/paper/paper",
-    "pages/logs/logs",
-    "pages/views/views",
-    "pages/demo/demo",
-    "pages/tools/enroll/enroll"
-  ],
-  "window": {
-    "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "white",
-    "navigationBarTitleText": "comic22",
-    "navigationBarTextStyle": "black"
-  },
-  "networkTimeout": {
-    "request": 10000,
-    "downloadFile": 10000
-  },
-  "debug": true
+    "pages": [
+        "pages/index/index",
+        "pages/paper/paper",
+        "pages/logs/logs",
+        "pages/views/views",
+        "pages/demo/demo",
+        "pages/tools/enroll/enroll"
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#ffffff",
+        "navigationBarTitleText": "comic",
+        "navigationBarTextStyle": "black"
+    },
+    "networkTimeout": {
+        "request": 10000,
+        "downloadFile": 10000
+    },
+    "plugins": {
+        "skin": {
+            "version": "dev-8b0a572a5c5a586f0dc45f364d4b64fe",
+            "provider": "wxc89a988f9f3d1fad"
+        }
+    },
+    "debug": true,
+    "sitemapLocation": "sitemap.json"
 }

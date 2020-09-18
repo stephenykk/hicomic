@@ -1,4 +1,5 @@
-
+import sice from '../../../utils/sice.js'
+console.log('sice:', sice)
 
 Page({
   data: {
